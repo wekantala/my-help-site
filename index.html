@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComputerHelp</title>
+    <link rel="icon" href="computerhelp_logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4 flex items-center justify-between shadow-md">
+      <div class="flex items-center">
+        <img src="computerhelp_logo.png" alt="Logo" class="w-10 h-10 mr-3" />
+        <h1 class="text-xl font-bold">ComputerHelp</h1>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-16 px-6 bg-white shadow-inner">
+      <h2 class="text-3xl font-bold mb-4">დისტანციური ტექნიკური დახმარება</h2>
+      <p class="text-lg text-gray-600 mb-8">
+        აირჩიე როგორ გსურს დახმარება: ონლაინ მხარდაჭერა თუ სპეციალისტის გამოძახება ადგილზე.
+      </p>
+      <div class="space-x-4">
+        <button onclick="document.getElementById('onlineModal').classList.remove('hidden')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition">ონლაინ დახმარება</button>
+        <button onclick="document.getElementById('callModal').classList.remove('hidden')" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-md transition">გამოძახების გაფორმება</button>
+      </div>
+    </section>
+
+    <!-- Online Help Modal -->
+    <div id="onlineModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-50">
+      <div class="bg-white rounded-lg p-6 w-full max-w-md">
+        <h3 class="text-xl font-bold mb-4">აირჩიე დახმარების მეთოდი</h3>
+        <form>
+          <label class="block mb-2">დახმარების ტიპი:</label>
+          <select class="w-full border rounded p-2 mb-4">
+            <option>AnyDesk</option>
+            <option>UltraViewer</option>
+            <option>Skip</option>
+          </select>
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">გაგრძელება</button>
+        </form>
+        <button onclick="document.getElementById('onlineModal').classList.add('hidden')" class="mt-4 text-red-600">დახურვა</button>
+      </div>
+    </div>
+
+    <!-- Call Request Modal -->
+    <div id="callModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center hidden z-50">
+      <div class="bg-white rounded-lg p-6 w-full max-w-md">
+        <h3 class="text-xl font-bold mb-4">შეავსე ინფორმაცია</h3>
+        <form>
+          <input type="text" placeholder="სახელი" class="w-full border rounded p-2 mb-3" />
+          <input type="tel" placeholder="ტელეფონის ნომერი" class="w-full border rounded p-2 mb-3" required />
+          <input type="text" placeholder="მისამართი (არასავალდებულო)" class="w-full border rounded p-2 mb-3" />
+          <textarea placeholder="დამატებითი ინფორმაცია" class="w-full border rounded p-2 mb-3"></textarea>
+          <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">დამიკავშირდით</button>
+        </form>
+        <button onclick="document.getElementById('callModal').classList.add('hidden')" class="mt-4 text-red-600">დახურვა</button>
+      </div>
+    </div>
+
+    <!-- Chat Icons -->
+    <div class="fixed bottom-5 right-5 flex flex-col space-y-4 z-50">
+      <a href="#" class="w-12 h-12 flex items-center justify-center bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg" title="WhatsApp">
+        <i class="fab fa-whatsapp text-xl"></i>
+      </a>
+      <a href="#" class="w-12 h-12 flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg" title="Messenger">
+        <i class="fab fa-facebook-messenger text-xl"></i>
+      </a>
+    </div>
+
+  </body>
+</html>
